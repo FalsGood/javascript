@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kategori nilai pemrograman dasar</title>
+</head>
+
+<body>
+  <script>
+    var nilai = prompt("kategori nilai")
+    var grade = "";
+    if (nilai <= 100 && nilai >= 80) {
+      document.write("A");
+    } else if (nilai < 79 && nilai >= 70) {
+      document.write("B");
+    } else if (nilai < 60 && nilai >= 50) {
+      document.write("C");
+    } else if (nilai < 49 && nilai >= 30) {
+      document.write("D");
+    } else if (nilai < 29 && nilai >= 0) {
+      document.write("E");
+    } else {
+      document.write("Nilai tidak valid");
+    }
+  </script>
+</body>
+
+</html>
