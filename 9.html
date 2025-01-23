@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Tahun Kabisat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cek Tahun Kabisat</h1>
+    <p>Masukkan tahun untuk mengetahui apakah itu tahun kabisat atau bukan:</p>
+    <input type="number" id="yearInput" placeholder="Masukkan tahun">
+    <button onclick="checkLeapYear()">Cek Tahun</button>
+    <div id="result" class="result"></div>
+
+    <script>
+        function checkLeapYear() {
+            const year = parseInt(document.getElementById('yearInput').value);
+            const resultDiv = document.getElementById('result');
+
+            if (isNaN(year)) {
+                resultDiv.textContent = "Harap masukkan angka yang valid.";
+                return;
+            }
+
+            // Logika tahun kabisat
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                resultDiv.textContent = `${year} adalah tahun kabisat.`;
+            } else {
+                resultDiv.textContent = `${year} bukan tahun kabisat.`;
+            }
+        }
+    </script>
+</body>
+</html>

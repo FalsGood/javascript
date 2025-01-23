@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Menentukan Angka</title>
+</head>
+<body>
+    <h1>Masukkan Angka</h1>
+    <input type="number" id="angka" placeholder="Masukkan angka">
+    <button onclick="cekAngka()">Cek Angka</button>
+
+    <script>
+        function cekAngka() {
+            var angka = document.getElementById("angka").value;
+            angka = parseFloat(angka); // Mengonversi input menjadi angka
+
+            if (angka > 0) {
+                console.log(angka + " adalah angka positif.");
+            } else if (angka < 0) {
+                console.log(angka + " adalah angka negatif.");
+            } else {
+                console.log("Angka adalah nol.");
+            }
+        }
+    </script>
+</body>
+</html>
