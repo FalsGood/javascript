@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Kendaraan</title>
+</head>
+<body>
+    <h2>Masukkan Kode Plat Nomor Kendaraan:</h2>
+    <input type="text" id="kodePlat" maxlength="1">
+    <button onclick="tampilkanKendaraan()">Tampilkan Jenis Kendaraan</button>
+    <p id="hasil"></p>
+
+    <script>
+        function tampilkanKendaraan() {
+            var kode = document.getElementById("kodePlat").value.toUpperCase();
+            var jenisKendaraan;
+            
+            if(kode === "P") {
+                jenisKendaraan = "Pesawat";
+            } else if(kode === "M") {
+                jenisKendaraan = "Mobil";
+            } else if(kode === "K") {
+                jenisKendaraan = "Kereta";
+            } else {
+                jenisKendaraan = "Jenis kendaraan tidak dikenali.";
+            }
+            
+            document.getElementById("hasil").innerHTML = jenisKendaraan;
+        }
+    </script>
+</body>
+</html>

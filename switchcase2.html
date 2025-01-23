@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Produk</title>
+</head>
+<body>
+    <h2>Masukkan Kode Produk:</h2>
+    <input type="text" id="kodeProduk" maxlength="1">
+    <button onclick="tampilkanKategori()">Tampilkan Kategori</button>
+    <p id="hasil"></p>
+
+    <script>
+        function tampilkanKategori() {
+            var kode = document.getElementById("kodeProduk").value.toUpperCase();
+            var kategori;
+            
+            if(kode === "A") {
+                kategori = "Hardware Komputer";
+            } else if(kode === "B") {
+                kategori = "Buah-Buahan";
+            } else if(kode === "C") {
+                kategori = "Makanan";
+            } else {
+                kategori = "Kategori tidak dikenali.";
+            }
+            
+            document.getElementById("hasil").innerHTML = kategori;
+        }
+    </script>
+</body>
+</html>
